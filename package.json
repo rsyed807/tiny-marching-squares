@@ -1,0 +1,17 @@
+{
+  "name": "tiny-marching-squares",
+  "version": "0.1.0",
+  "description": "Extract contour line segments from a two-dimensional scalar grid, so you can render isolines without pulling in a plotting framework.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {}
+}
