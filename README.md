@@ -55,3 +55,10 @@ triangles, using a fixed rule rather than inspecting the sample magnitudes. That
 keeps output deterministic, but it means the contour around a saddle is drawn as
 two separate pieces rather than one continuous curve. If you need a different
 saddle resolution, post-process the segments yourself.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
